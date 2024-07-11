@@ -1,0 +1,484 @@
+:root{
+  --main-color:#08264b;
+  --secondary-color:#00ffff;
+}
+*{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+header{
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.section-title::after{
+  content: '';
+  width: 40%;
+  height: 4px;
+  position: absolute;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 20px);
+}
+.hidden{
+  visibility: hidden;
+}
+.smaller{
+  transform: scale(0.8);
+}
+section{
+  position: relative;
+  padding: 100px 0;
+}
+/* End Globle CSS */
+header nav a{
+  color: white;
+  padding: 15px;
+  position: relative;
+}
+header nav a i{
+  color: white;
+  position: absolute;
+  bottom: 35%;
+  padding: -5px;
+}
+header .pop-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+header .pop-menu a{
+  color: var(--main-color);
+}
+header .pop-menu i{
+  color: white;
+  margin: 10px;
+  font-size: 30px;
+}
+/* End Header */
+.a-button{
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.a-button:hover{
+  opacity: 90%;
+}
+.landing{
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+}
+.landing .container{
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  margin:20px auto;
+  height: 100%;
+}
+.landing .container div{
+  width: 50%;
+}
+.landing .container div h3{
+  font-weight: 600;
+  font-size: 35px;
+}
+.landing .container div p {
+  line-height: 2em;
+}
+.landing .container div div{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.landing .container div div a{
+  padding: 20px;
+}
+.landing .container div div a:first-child{
+  color: var(--main-color);
+}
+.landing .container div div a:last-child{
+  background-color: var(--main-color);
+  outline: 1px solid white;
+  color: white;
+}
+.landing img{
+  position: absolute;
+  bottom: -45%;
+  transform: scale(0.9);
+  right: 0;
+}
+.to-top{
+  position: fixed;
+  bottom:5%;
+  right: 5%;
+  font-size: 30px;
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: white;
+  text-align: center;
+}
+/* Landing */
+.home{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.home .container{
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.home .container h3{
+  text-align: center;
+  font-weight:800;
+  font-size: 30px;
+  position: relative;
+}
+.home .container .deck{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.home .container .deck .card{
+  text-align: center;
+}
+/* End Home */
+.more{
+  width: 100%;
+  background-color: #dcf9ff;
+}
+.more .container,.code .container{
+  height: 50vh;
+  width: 100%;
+  padding: 0;
+}
+.more .container .color{
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+}
+.more .container .text{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-size: 25px;
+}
+.more .container .text p{
+  color:gray;
+  font-size: 15px;
+  width: 50%;
+}
+/* More */
+.code{
+  width: 100%;
+  height: 80vh;
+}
+.code .container .text{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 30px;
+  font-size: 20px;
+}
+.code .container .text h3,
+.code .container .text p{
+  width: 50%;
+  text-align: right;
+}
+
+.code .container .img{
+  text-align: center;
+  max-width: 60%;
+}
+.code .container .deck .card {
+  transition: 0.3s ease;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+}
+.code .container .deck .card:hover {
+  background-color: var(--secondary-color);
+  margin-top:20px ;
+}
+.code .container .deck .card:hover .hidden{
+  visibility: visible;
+}
+.code .container .deck .card i{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--main-color);
+  height: 20px;
+  width: 100%;
+}
+.code .container .deck .card i p{
+  width: 100%;
+}
+.code .container .deck .card p{
+  width: 60%;
+  color: gray;
+  height: fit-content;
+}
+/* code */
+.need{
+  background-color: #dcf9ff;
+  padding: 75px 0;
+}
+.need .container .text{
+  width: 50%;
+}
+.need .container .img{
+  width: 45%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,130px);  
+}
+.white{
+  background-color: white;
+  height: 400px;
+  margin-top: 50px;
+}
+.black{
+  height: 450px;
+  width: 200px;
+  transform: translate(-20px);
+  background-color: #182835;
+}
+/* Need */
+.video{
+  background-color: var(--main-color);
+  height: 70vh;
+}
+.video .container{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  flex-direction: column;
+  color: white;
+}
+.video .container a{
+  color: white;
+}
+.video .container i{
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+  border-radius: 50%;
+}
+/* VIDEO */
+.join .container{
+  width: 70%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.join .container a{
+  border-radius:0;
+}
+/* join */
+.quote{
+  background-color: var(--main-color);
+}
+.quote .container{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+/* quote */
+.get{
+  background-color: #dcf9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get .container{
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+
+}
+.get .container .top{
+  display: flex;
+}
+.get .container .top h3,
+.get .container .top p{
+  text-align: left;
+  width: 100%;
+}
+.get .container .a-button{
+  border-radius: 0;
+  padding: 20px;
+  margin-top:15px ;
+}
+.get .container .top .text{
+  display: flex;
+  align-items: flex-start;
+}
+/* get */
+.links .container{
+  width:70%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.links .container ul{
+  list-style: none;
+  font-size: 20px;
+}
+.links .container ul a{
+  color: gray;
+}
+.links .container ul a:first-child li{
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* links */
+.subscribe .container{
+  flex-direction: column;
+}
+.subscribe .container h3{
+  font-size: 30px;
+}
+.subscribe .container p{
+  color: gray;
+}
+.subscribe .container form{
+  display: flex;
+  gap: 10px;
+  width: 70%;
+  text-align: center;
+}
+.subscribe .container input{
+  background-color: #dcf9ff;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  width: 100%;
+  padding: 10px;
+}
+.subscribe .container input:focus{
+  border: 1px black solid;
+  border-radius:8px ;
+}
+.subscribe .container a{
+  border-radius: 0;
+  width: 140px;
+}
+/* subscribe */
+.footer{
+  background-color: var(--main-color);
+  padding: 0;
+  font-size:20px;
+  color: var(--secondary-color);
+}
+.footer .social{
+  display: flex;
+  gap: 15px;
+}
+.footer .social a{
+  color: white;
+}
+/* footer */
+@media (max-width:767px) {
+  .footer .social{
+    display: none;
+  }
+  form{
+    flex-direction: column;
+  }
+  .subscribe .container form input{
+    font-size: 15px;
+  }
+  .subscribe .container form *{
+    width: 100%;
+  }
+  .landing img,.smaller,div.img.smaller{
+    display: none;
+  }
+  .landing .container div{
+    width: 100%;
+  }
+  .landing .container div div{
+    flex-direction: column;
+  }
+  .landing .container div div a{
+    margin-bottom: 20px;
+  }
+  header nav{
+    display: none;
+  }
+  .more .container,.code .container{
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0 100px;
+  }
+  .code .container .text{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  .code .container .text h3, .code .container .text p{
+    text-align: center;
+  }
+  .code .container .img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .need.code .container .img{
+    display: none;
+  }
+  section.code div.container div.text,* .container .deck .card p.text.hidden {
+    width: 100%;
+    text-align:center;
+    margin: 20px;
+  }
+  .get .container .top .img{
+    display: none;
+  }
+  .get .container .top .text{
+    align-items: center;
+  }
+  .video .container{
+    font-size: 20px;
+  }
+}
